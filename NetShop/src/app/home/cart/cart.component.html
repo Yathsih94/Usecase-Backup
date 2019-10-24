@@ -1,0 +1,51 @@
+<div class="div-0">
+  <div class=div-1>
+    <p-panel header="My Cart Items ({{count}})" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+      <p-table [value]="cartItems">
+        <ng-template pTemplate="header">
+          <tr align="center">
+
+            <th>Name</th>
+            <th>Product Image</th>
+            <th>Brand</th>
+            <th>Quantity</th>
+            <th>Unit Price (X) Quantity </th>
+            <th>Sub Total</th>
+
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cart>
+          <tr align="center">
+            <td><b>{{cart.name}}</b></td>
+            <td><img src="{{cart.image}}" height="100" width="100"></td>
+            <td><b>{{cart.brand}}</b></td>
+            <td>
+              <button pButton type="button" (click)="increaseQuantity(cart)" icon="pi pi pi-plus"
+                class="ui-button-secondary"></button>
+              &nbsp;<label><b>{{cart.quantity}} </b></label> &nbsp;
+              <button pButton type="button" (click)="decreaseQuantity(cart)" icon="pi pi pi-minus"
+                class="ui-button-secondary"></button><br /><br />
+              <button pButton type="button" (click)="remove(cart)" label="Remove Item" icon="pi pi pi-trash"
+                class="ui-button-danger"></button>
+            </td>
+            <td><b>&#8377; {{cart.price}} X {{cart.quantity}}</b></td>
+            <td>
+              <h5> &#8377;{{cart.subtotal}}</h5>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-panel>
+  </div>
+  <div class="div-2">
+    <p-card [style]="{width: '300px'}">
+      <b>Total Cart Value</b>
+      <h4>&#8377; {{amount}}</h4>
+      <p-footer>
+        <button pButton type="button" label="Proceed to Pay" [disabled]="amount==0" icon="pi pi pi-check"
+          style="margin-right: .25em" (click)="payment(amount)"></button>
+      </p-footer>
+    </p-card>
+    <p-toast [style]="{marginTop: '80px'}" position="top-center"></p-toast>
+  </div>
+</div>

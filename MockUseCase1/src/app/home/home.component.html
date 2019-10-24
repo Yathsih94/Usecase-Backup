@@ -1,0 +1,85 @@
+<div style="padding: 1em" align="right">
+  <button pButton label="Log Out" (click)="logout()" icon="pi pi-sign-out"></button>
+</div>
+<div class="container">
+  <button pButton label="Add Book" (click)="showPopUp()" icon="pi pi-plus"></button>
+  <hr />
+  <div style="text-align: center">
+    <input type="text" size="30" pInputText [(ngModel)]="searchByName" placeholder="Search By Book Title"
+      (keyup)="searchBook()">&nbsp;
+    <input type="text" size="30" pInputText [(ngModel)]="searchByAuthor" placeholder="Search By Author Name "
+      (keyup)="searchBook()">
+  </div>
+  <hr />
+  <div style="text-align: center">
+    <h3 style="color: orange">List of Books</h3>
+    <p-table [columns]="cols" [value]="books" [paginator]="true" [rows]="10">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns">
+            {{col.header}}
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-book>
+        <tr>
+          <td>
+            {{book.bookName}}
+          </td>
+          <td>
+            {{book.authorName}}
+          </td>
+          <td>
+            {{book.bookStatus}}
+          </td>
+          <td>
+            <div *ngIf="book.bookStatus=='AVAILABLE'">
+              <button type="button" pButton (click)="borrowBook(book.bookId)" label="Borrow "
+                class="ui-button-primary"></button>
+            </div>
+            <div *ngIf="book.bookStatus=='BORROWED'">
+              <button type="button" pButton (click)="requestBook(book.bookId)" label=" Request"
+                class="ui-button-success"></button>
+            </div>
+            <div *ngIf="book.bookStatus=='REQUESTED'">
+              <button type="button" pButton label="Requested" class="ui-button-success" [disabled]="show"
+                [disabled]="show"></button>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div>
+    <p-dialog header="Add Book" [(visible)]="display" [modal]="true" [responsive]="true"
+      [style]="{width: '350px', minWidth: '200px'}" [minY]="70" [maximizable]="true" [baseZIndex]="10000">
+      <div class="container " style="text-align: center">
+        <b>Book Name</b>
+        <input name="bname" [(ngModel)]="bookName" type="text" size="30" pInputText placeholder="Book Name"><br /><br />
+        <b>Author Name</b>
+        <input name="aname" [(ngModel)]="authorName" type="text" size="30" pInputText placeholder="Author Name">
+
+      </div>
+      <p-footer>
+        <div align="center">
+          <button type="button" pButton (click)="addBook()" label="Save"></button>
+          <button type="button" pButton (click)="cancelAdd()" label="Cancel" class="ui-button-secondary"></button>
+        </div>
+      </p-footer>
+
+    </p-dialog>
+
+  </div>
+
+</div>
+
+<p-toast [style]="{marginTop: '80px'}" position="top-center"></p-toast>
+<p-confirmDialog [style]="{width: '30vw'}"></p-confirmDialog>
+
+
+<div *ngFor="let b of books">
+
+</div>

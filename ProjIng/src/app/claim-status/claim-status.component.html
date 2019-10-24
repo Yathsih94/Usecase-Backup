@@ -1,0 +1,17 @@
+<!-- Designing the page to check the status of the claimed application based on the claim Id -->
+<div class="container mt-5">
+  <h5 style="color: orange">Check your Claim Status Here</h5>
+  <div class="container mt-4">
+    <span class="ui-float-label">
+      <input id="float-input" type="text" size="30" [(ngModel)]="claimId" pInputText>
+      <label for="float-input">Claim ID</label>&nbsp;&nbsp;
+      <button pButton type="button" label="Track" (click)="tarckstatus()"></button>
+    </span>
+
+
+  </div>
+  <div style="width: 38%">
+
+    <p-steps [model]="items" [(activeIndex)]="activeIndex"></p-steps>
+  </div>
+</div>

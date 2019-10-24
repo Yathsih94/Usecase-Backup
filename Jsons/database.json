@@ -1,0 +1,90 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "arun",
+      "email": "arun@gmail.com",
+      "phone": "7869453621",
+      "password": "arun",
+      "utype": "customer"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Yathish",
+      "email": "yathishpk94@gmail.com",
+      "phone": "8951285209",
+      "password": "yathi123",
+      "businesstype": "Home Appliances",
+      "shopname": "Eswar Electronis",
+      "utype": "seller",
+      "code": "560040"
+    },
+    {
+      "id": 1,
+      "name": "Arun",
+      "email": "arun@gmail.com",
+      "phone": "8618211055",
+      "password": "arun123",
+      "businesstype": "Super Market",
+      "shopname": "Ideal Mart",
+      "utype": "seller",
+      "code": "560050"
+    },
+    {
+      "id": 1,
+      "name": "Yathish",
+      "email": "yathishpk94@gmail.com",
+      "phone": "8951285209",
+      "password": "yathi123",
+      "businesstype": "Home Appliances",
+      "shopname": "Eswar Electronis",
+      "utype": "customer",
+      "code": "560040"
+    }
+  ],
+  "reviews": [
+        {
+      "rating": 2,
+      "message": "fsfsd",
+      "pid": "1",
+      "id": 15
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "pname": "Sony Tv",
+      "qty": 2,
+      "price": 25000,
+      "image": "",
+      "businesstype": "Home Appliances",
+      "shopname": "Eswar Electronis",
+      "code": "560040"
+    },
+    {
+      "id": 2,
+      "pname": "Lg Refrigirator",
+      "qty": 5,
+      "price": 18000,
+      "image": "",
+      "businesstype": "Home Appliances",
+      "shopname": "Digishop",
+      "code": "577213"
+    },
+    {
+      "id": 3,
+      "pname": "Bose SoundBar",
+      "qty": 8,
+      "price": 43000,
+      "image": "",
+      "businesstype": "Home Appliances",
+      "shopname": "Trishul Agencies",
+      "code": "560098"
+    }
+  ]
+
+
+
+}

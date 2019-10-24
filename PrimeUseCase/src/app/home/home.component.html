@@ -1,0 +1,35 @@
+
+
+
+    <span style="float: none;"><input type="text" pInputText placeholder="Search for Movies" size="70"></span>
+       <button type="text" (click)="confirm()" pButton icon="pi pi-check" label="LogOut" style="float:right"></button> &nbsp;&nbsp;<strong style="color: red;float:right">Welcome {{userName}}</strong>
+        <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+    <br/>
+    <br/>
+
+    <br/>
+    <hr/>
+    <div class="ui-g" style="width:100%">
+        <div class="ui-g-3" *ngFor="let m of movies">
+            <p-card  [style]="{width: '300px'}" styleClass="ui-card-shadow" >
+                <p-header>
+                    <img src="{{m.imaage}}" alt="Movie Image">
+                </p-header>
+                <div><h3>{{m.movie_name}}</h3></div>
+                <div><h5>{{m.languages}}</h5></div>
+                <div><h5>Sensor Certified as: {{m.sensor}}</h5></div>
+                <p-footer>
+                    <button pButton type="button" label="Book Tickets" icon="pi pi-check" style="margin-right: .25em"></button>
+                </p-footer>
+            </p-card>
+        </div>
+    </div>
+<hr>
+
+
+
+
+
+
+

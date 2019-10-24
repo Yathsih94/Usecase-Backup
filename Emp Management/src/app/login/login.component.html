@@ -1,0 +1,32 @@
+<div class="col-1">
+
+  <b class="b-1">Emp Management</b>
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle">
+  </p-confirmDialog>
+</div>
+<br />
+<br />
+<br />
+<form align="center">
+
+  <h2 style="color:rgb(25, 81, 201)">Login</h2>
+  <br />
+
+  <span class="ui-float-label">
+    <input id="float-input" type="email" size="30" name="nmail" [(ngModel)]="email" placeholder="Email" pInputText>
+  </span>
+  <br />
+
+  <span class="ui-float-label">
+    <input id="float-input-1" type="password" size="30" name="password" [(ngModel)]="pass" placeholder="Password"
+      pInputText>
+  </span>
+  <a routerLink="/forgotPassword">Forgot Password?</a>
+  <br />
+  <br />
+
+  <p-button label="Login" (click)="login()"></p-button>&nbsp;&nbsp;
+  <a routerLink="/register">New User? Just go to Registration!</a>
+
+  <p-toast [style]="{marginTop: '80px'}" position="top-right"></p-toast>
+</form>

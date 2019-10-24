@@ -1,0 +1,71 @@
+<div class="col-1">
+  <button type="text" (click)="confirm()" pButton icon="pi pi-check" label="LogOut" style="float:right">
+  </button>
+  <b class="b-1">CarPark App</b>
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle">
+  </p-confirmDialog>
+</div>
+<div class="col-2">
+
+  <p-card align="center" class="card-1" *ngFor="let info of userInfo">
+    <img class="iamge-1" src="assets/profile.png" alt="ProfileImage" />
+    <h3>User Name: {{info.name}}</h3>
+    <h4>Phone No: {{info.phone}}</h4>
+    <h4>User Type: {{info.role}}</h4>
+  </p-card>
+
+</div>
+
+<div class="col-3">
+
+  <p-tabView>
+    <p-tabPanel header="All Slots ( Available/Booked )" class="p-tab-1">
+      <span class="butt" *ngFor="let s of slots">
+        <button pButton type="button" label="{{s.slot}}"
+          class="ui-button-raised {{(s.status=='booked')?'ui-button-raised':'ui-button-secondary'}}"></button>
+      </span>
+      <br />
+      <br />
+      <br />
+
+      <div>
+        <h3>Slots:</h3>
+        <button pButton type="button" class="ui-button-secondary"></button><b>Available</b>&nbsp;
+        <button pButton class="ui-button-raised"></button><b>Booked</b>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Request for Slot">
+      <h3>Request for a slot here..!</h3>
+
+      <p-calendar [(ngModel)]="dateValue" placeholder="Select Date" [minDate]="minDateValue" [maxDate]="maxDateValue"
+        [readonlyInput]="true">
+      </p-calendar>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p-dropdown [(ngModel)]="noOfDays" [options]="days" placeholder="Select Days">
+      </p-dropdown>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button pButton type="button" label="Request for Slot" (click)="requestSlot()" [disabled]="check"></button>
+      <p-dialog header="Info" [(visible)]="display" [modal]="true" [responsive]="true"
+        [style]="{width: '350px', minWidth: '200px'}" [minY]="70" [maximizable]="true" [baseZIndex]="10000">
+        <h3>Successfully Booked the Slot..!</h3>
+        <p-footer>
+          <button type="button" pButton icon="pi pi-check" (click)="display=false;check=true" label="OK"></button>
+        </p-footer>
+      </p-dialog>
+      <br />
+      <br />
+    </p-tabPanel>
+    <p-tabPanel header="Current Booking Details">
+
+      <p-card header="Assigned Slot Details" [style]="{width: '781px'}">
+        <div *ngFor="let d of historyData">
+          <h3>Slot No : </h3>{{d.slot}}
+          <h3>Status : </h3>{{d.status}}
+          <h3>From : </h3>{{d.start | date}}
+          <h3>To : </h3>{{d.end | date}}
+        </div>
+      </p-card>
+    </p-tabPanel>
+  </p-tabView>
+
+</div>

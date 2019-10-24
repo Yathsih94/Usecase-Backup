@@ -1,0 +1,49 @@
+<form [formGroup]="regForm">
+    <div class="container mt-5 col-4" style="text-align: center">
+        <p-card [style]="{width: '360px'}" styleClass="ui-card-shadow">
+            <h3 style="color: orange">Register</h3>
+            <div style="color: red">
+                <div>
+                    <input pInputText type="text" name="uname" [(ngModel)]="user.name" size="30" formControlName="name"
+                        placeholder="User Name" /><br />
+                    <span *ngIf="regForm.get('name').touched && !regForm.get('name').value">User Name Should
+                        required</span>
+                </div><br />
+                <div>
+                    <input pInputText type="email" name="email" [(ngModel)]="user.email" size="30"
+                        formControlName="mailid" placeholder="Email ID" /><br />
+                    <span *ngIf="regForm.get('mailid').touched && !regForm.get('mailid').value">Email Id Should
+                        required</span>
+                </div><br />
+                <div>
+                    <input pInputText type="mobile" name="mob" [(ngModel)]="user.phone" size="30"
+                        formControlName="mobile" placeholder="Mobile No" /><br />
+                    <span *ngIf="regForm.get('mobile').touched && !regForm.get('mobile').value">Mobile No Should
+                        required</span>
+                    <span *ngIf="regForm.get('mobile').invalid && regForm.get('mobile').value">Should be 10 digit</span>
+                </div><br />
+                <div>
+                    <input pInputText type="password" name="pass" [(ngModel)]="user.password" size="30"
+                        formControlName="pword" placeholder="Password" /><br />
+                    <span *ngIf="regForm.get('pword').touched && !regForm.get('pword').value">Password Should
+                        required</span>
+                </div><br />
+                <div>
+                    <input pInputText type="password" name="cpass" [(ngModel)]="cpassword" size="30"
+                        formControlName="cpword" placeholder="Confirm Password" /><br />
+                    <span *ngIf="regForm.get('cpword').touched && !regForm.get('cpword').value">Confirm Password Should
+                        required</span>
+                </div>
+            </div><br />
+            <p-footer>
+                <button pButton type="button" label="Register" icon="pi pi-sign-in" style="margin-right: .25em"
+                    [disabled]="regForm.invalid" (click)="register()"></button>
+                <button pButton type="reset" label="Clear" icon="pi pi-times" class="ui-button-warning"></button>
+                <div class="container mt-3 ">
+                    <a routerLink="/login">Have an Account? Login Here</a>
+                </div>
+            </p-footer>
+        </p-card>
+    </div>
+    <p-toast [style]="{marginTop: '80px'}" position="top-center"></p-toast>
+</form>

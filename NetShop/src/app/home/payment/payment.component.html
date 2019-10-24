@@ -1,0 +1,14 @@
+<div align="center">
+  <p-card [style]="{width: '320px'}">
+    <h5>Total Amount: {{amount}}</h5>
+    <span
+      style="background-image:url(assets/captcha.PNG);padding: 10px 10px 10px 10px"><b>{{captcha}}</b></span>&nbsp;<br /><br />
+    <input pInputText [(ngModel)]="captchaVal" name="captchaVal" placeholder="Enter the above captcha" /><br /><br />
+    <button pButton (click)="refresh()" icon="pi pi pi-refresh" label="Refresh"
+      class="ui-button-secondary"></button><br /><br />
+    <button pButton (click)="pay()" [disabled]="captchaVal==null || captchaVal==''" label="Place Order"
+      icon="pi pi pi-thumbs-up"></button>
+  </p-card>
+
+  <p-toast [style]="{marginTop: '80px'}" position="top-center"></p-toast>
+</div>

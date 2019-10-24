@@ -1,0 +1,95 @@
+{ "products": [
+    {
+        "id":1,
+        "name":"One plus 7",
+        "brand":"Oppo",
+        "category":"Mobile",
+        "image":"assets/oneplus.jpg",
+        "price":37000,
+        "subtotal":37000,
+        "rating":4.9,
+        "quantity":1
+      }
+       ,{
+        "id":2,
+        "name":"K20 pro",
+        "brand":"Redmi",
+        "category":"Mobile",
+        "image":"assets/k20pro.jpg",
+        "price":27000,
+        "subtotal":27000,
+        "rating":4.0,
+        "quantity":1
+      }
+       ,{
+        "id":3,
+        "name":"Bravia",
+        "brand":"Sony",
+        "category":"TV",
+        "image":"assets/sony.jpg",
+        "price":60000,
+        "subtotal":60000,
+        "rating":4.8,
+        "quantity":1
+      },
+      {
+        "id":4,
+        "name":"LG Refrigirator",
+        "brand":"LG",
+        "category":"Home Appliances",
+        "image":"assets/lg.jpg",
+        "price":23000,
+        "subtotal":23000,
+        "rating":4.3,
+        "quantity":1
+      },
+      {
+        "id":5,
+        "name":"Hush Puppies",
+        "brand":"Bata",
+        "category":"Causual Shoes",
+        "image":"assets/bata.jpeg",
+        "price":1800,
+        "subtotal":1800,
+        "rating":4.4,
+        "quantity":1
+      },
+      {
+        "id":6,
+        "name":"Ajanta Analog Wall Clock ",
+        "brand":"Ajanta",
+        "category":"Home Decor",
+        "image":"assets/clock.jpeg",
+        "price":2300,
+        "subtotal":2300,
+        "rating":4.2,
+        "quantity":1
+      }
+       ,{
+        "id":7,
+        "name":"IFB Microwave Oven",
+        "brand":"IFB",
+        "category":"Kitchen Appliances",
+        "image":"assets/ifb.jpeg",
+        "price":9249,
+        "subtotal":9249,
+        "rating":4.65,
+        "quantity":1
+      },
+      {
+        "id":8,
+        "name":"Philips 8.5 W LED Bulb",
+        "brand":"Philips",
+        "category":"Home Lighting",
+        "image":"assets/bulb.jpeg",
+        "price":765,
+        "subtotal":765,
+        "rating":4.6,
+        "quantity":1
+      }
+
+
+    
+] }
+
+

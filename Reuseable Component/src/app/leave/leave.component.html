@@ -1,0 +1,10 @@
+<div align="center">
+    <p-calendar [(ngModel)]="rangeDates" [minDate]="minDateValue" placeholder="Select Dates" selectionMode="range"
+        [readonlyInput]="true" [disabledDates]="invalidDates">
+    </p-calendar>&nbsp;&nbsp;&nbsp;
+    <button pButton type="button" label="Apply Leave" class="ui-button-raised" (click)="applyLeave()"></button>
+</div>
+<div>
+    <p-messages [(value)]="msgs"></p-messages>
+</div>
+<router-outlet></router-outlet>

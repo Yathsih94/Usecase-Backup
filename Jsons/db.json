@@ -1,0 +1,116 @@
+{
+  "register": [
+    {
+      "name": "Yathish",
+      "email": "yathi123@gmail.com",
+      "phone": "8951285209",
+      "pass": "yathi123",
+      "id": 1
+    },
+    {
+      "name": "Arun",
+      "email": "arun@gmail.com",
+      "phone": "8976456732",
+      "pass": "arun123",
+      "id": 2
+    },
+    {
+      "name": "Rajesh",
+      "email": "rajeshdr@gmail.com",
+      "phone": "7259875436",
+      "pass": "rajesh123",
+      "id": 3
+    },
+    {
+      "name": "Jayaprakash",
+      "email": "prakash@gmail.com",
+      "phone": "7549832341",
+      "pass": "prakash123",
+      "id": 4
+    }
+   ],
+"movies":[
+{
+  "id":1,
+  "movie_name":"Pailwan",
+  "languages":["Kannda","Tamil","Telugu","Hindi","Malayalam"],
+  "sensor":"U/A",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":2,
+  "movie_name":"KGF",
+  "languages":["Kannda","Tamil","Telugu","Hindi","Malayalam"],
+  "sensor":"U/A",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":3,
+  "movie_name":"Nanna Prakaara",
+  "languages":"Kannda",
+  "sensor":"U",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":4,
+  "movie_name":"KGF",
+  "languages":["Kannda","Tamil","Telugu","Hindi","Malayalam"],
+  "sensor":"U/A",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":5,
+  "movie_name":"Nanna Prakaara",
+  "languages":"Kannda",
+  "sensor":"U",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":3,
+  "movie_name":"Nanna Prakaara",
+  "languages":"Kannda",
+  "sensor":"U",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":4,
+  "movie_name":"KGF",
+  "languages":["Kannda","Tamil","Telugu","Hindi","Malayalam"],
+  "sensor":"U/A",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":5,
+  "movie_name":"Nanna Prakaara",
+  "languages":"Kannda",
+  "sensor":"U",
+  "image":"assets/pailwan.jpg"
+}
+,
+{
+  "id":3,
+  "movie_name":"Nanna Prakaara",
+  "languages":"Kannda",
+  "sensor":"U",
+  "image":"assets/pailwan.jpg"
+},
+{
+  "id":4,
+  "movie_name":"KGF",
+  "languages":["Kannda","Tamil","Telugu","Hindi","Malayalam"],
+  "sensor":"U/A",
+  "image":"assets/kgf.jpg"
+},
+{
+  "id":5,
+  "movie_name":"Nanna Prakaara",
+  "languages":"Kannda",
+  "sensor":"U",
+  "image":"assets/pailwan.jpg"
+}
+
+
+
+
+]
+}

@@ -1,0 +1,19 @@
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h4 class="text-white">Financial Products</h4>
+    <p-accordion>
+      <div *ngFor="let category of categories">
+        <p-accordionTab header="{{category.categoryName}}" (click)="getProducts(category.categoryId)">
+          <h5>List of Available Products</h5>
+          <span *ngFor="let product of products">
+            <button pButton type="button" label="{{product.productName}}"
+              (click)="goToDesc(product.productId)"></button>&nbsp;
+          </span>
+        </p-accordionTab>
+      </div>
+    </p-accordion>
+  </div>
+</div>
+<div align="center" style="color:orange" class="mt-5">
+  <h1> Welcome to ING BANK</h1>
+</div>

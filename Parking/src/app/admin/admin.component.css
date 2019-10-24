@@ -1,0 +1,47 @@
+
+/* You can add global styles to this file, and also import other style files */
+.col-1{
+    background-color: rgb(54, 82, 109);
+    width: 100%;
+    float: left;
+    padding: 15px;
+    color: white;
+}
+
+.col-2{
+
+    width: 25%;
+    float: left;
+    padding: 15px;
+    
+}
+.col-3{
+
+    width: 63%;
+    float: left;
+    padding: 15px;
+    
+    
+   
+}
+
+.iamge-1{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.b-1{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(23, 210, 235);
+    font-size: 30px;
+}
+
+.butt{
+    padding: 5px;
+}
+
+.p-tab-1{
+    padding: 30px;
+    
+}

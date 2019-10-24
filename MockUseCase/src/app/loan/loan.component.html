@@ -1,0 +1,179 @@
+<div class="container mt-5">
+  <div>
+    <h5>Personal Details</h5><br />
+
+    <div class="row">
+      <div class="col-6">
+        <p-dropdown [options]="title" [(ngModel)]="user.title" placeholder="Select Title" [showClear]="true">
+        </p-dropdown>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.email" placeholder="Email" pInputText>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.firstName" placeholder="First Name" pInputText required>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.lastName" placeholder="Last Name" pInputText required>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <p-calendar [(ngModel)]="user.dob" size="30" dateFormat="dd/mm/yy" [yearNavigator]="true" yearRange="1975:2050"
+          [showIcon]="true" placeholder="Date of Birth" required>
+        </p-calendar>
+      </div>
+      <div class="col-6">
+        <p-dropdown [options]="ages" [(ngModel)]="user.age" placeholder="Select Your Age" [showClear]="true">
+        </p-dropdown>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <p-dropdown [options]="nationality" [(ngModel)]="user.nationality" placeholder="Select Nationality"
+          [showClear]="true">
+        </p-dropdown>
+      </div>
+      <div class="col-6">
+        <label>Gender :</label>&nbsp;
+        <p-radioButton name="gender" value="male" label="Male" [(ngModel)]="user.gender">
+        </p-radioButton>&nbsp;
+        <p-radioButton name="gender" value="female" label="Female" [(ngModel)]="user.gender">
+        </p-radioButton>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.identificationNumber" placeholder="ID No" pInputText>
+      </div>
+      <div class="col-6">
+        <p-calendar [(ngModel)]="user.idExpiryDate" [minDate]="minDate" size="30" dateFormat="dd/mm/yy"
+          [showIcon]="true" placeholder="ID Expiry Date"></p-calendar>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.phoneNumber" placeholder="Mobile No" pInputText>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.alternateNumber" placeholder="Alternate Mobile No" pInputText>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container mt-5">
+  <div>
+    <h5>Employement Details</h5><br />
+
+    <div class="row">
+      <div class="col-6">
+        <p-dropdown [options]="emptype" [(ngModel)]="user.employmentType" placeholder="Employement Type"
+          [showClear]="true">
+        </p-dropdown>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.employerName" placeholder="Employer Name" pInputText>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.jobTitle" placeholder="Designation" pInputText>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.totalExperience" placeholder="Experience in Years" pInputText>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container mt-5">
+  <div>
+    <h5>Asset Details</h5><br />
+    <b>Asset Address</b>
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.propertyStreet" placeholder="Street" pInputText>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.propertySector" placeholder="Sector" pInputText>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.pincode" placeholder="Zip Code" pInputText>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.purchasePrice" placeholder="Purchase Price" pInputText required>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.loanAmount" placeholder="Loan Amount" pInputText required
+          (change)="calcDownPay()">
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.downPayment" placeholder="Down Payment" pInputText
+          [readonly]="true">
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.loanToValue" placeholder="Loan To Value" pInputText
+          [readonly]="true">&nbsp;<b>%</b>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <div>
+    <h5>Income Details</h5><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.monthlyIncome" placeholder="Monthly Income" pInputText>
+      </div>
+      <div class="col-6">
+        <p-dropdown [options]="maritalStatus" [(ngModel)]="user.maritalStatus" placeholder="Marital Status"
+          [showClear]="true">
+        </p-dropdown>
+      </div>
+    </div><br />
+    <div class="row">
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="user.loanObligation" placeholder="Total Loan Obligation" pInputText>
+      </div>
+      <div class="col-6">
+        <p-dropdown [options]="tenure" [(ngModel)]="user.tenure" placeholder="Tenure" [showClear]="true">
+        </p-dropdown>
+      </div>
+    </div><br />
+    <!-- <div class="row">
+      <div class="col-6">
+        <p-dropdown [options]="tenure" [(ngModel)]="user.tenure" placeholder="Tenure" [showClear]="true">
+        </p-dropdown>
+      </div>
+      <div class="col-6">
+        <input type="text" size="30" [(ngModel)]="emi" placeholder="Easy Monthly Installment " pInputText
+          [readonly]="true">&nbsp;
+        <button pButton type="button" label="Calculate EMI" (click)="calcEmi()" class="ui-button-success"
+          icon="pi pi-question"></button>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <button pButton type="button" label="Sumbit Application" (click)="submitApplication()" icon="pi pi-check"
+    [disabled]="display"></button>
+</div><br />
+<p-toast [style]="{marginTop: '80px'}" position="top-center"></p-toast>

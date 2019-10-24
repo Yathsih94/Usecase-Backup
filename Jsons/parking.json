@@ -1,0 +1,122 @@
+{
+  "register": [
+    {
+      "name": "Yathish",
+      "email": "yathi123@gmail.com",
+      "phone": "8951285209",
+      "pass": "yathi123",
+      "role": "employee",
+      "id": 1,
+      "slotid": 3
+    },
+    {
+      "name": "Arun",
+      "email": "arun@gmail.com",
+      "phone": "8976456732",
+      "pass": "arun123",
+      "role": "employee",
+      "id": 2,
+      "slotid": ""
+    },
+    {
+      "name": "Rajesh",
+      "email": "rajeshdr@gmail.com",
+      "phone": "7259875436",
+      "pass": "rajesh123",
+      "role": "vip",
+      "id": 3,
+      "slotid": 2
+    },
+    {
+      "name": "Jayaprakash",
+      "email": "prakash@gmail.com",
+      "phone": "7549832341",
+      "pass": "prakash123",
+      "role": "admin",
+      "id": 4,
+      "slotid": 5
+    }
+  ],
+  "slots": [
+    {
+      "id": 1,
+      "slot": "A-001",
+      "start": "2019-09-19T12:44:14.647Z",
+      "end": "2019-09-20T12:44:14.647Z",
+      "status": "booked",
+      "uid": ""
+    },
+    {
+      "id": 2,
+      "slot": "A-002",
+      "start": "2019-09-19T13:47:32.162Z",
+      "end": "2019-09-20T13:47:32.162Z",
+      "status": "booked",
+      "uid": ""
+    },
+    {
+      "id": 3,
+      "slot": "A-003",
+      "start": "2019-09-19T14:12:11.919Z",
+      "end": "2019-09-20T14:12:11.919Z",
+      "status": "booked",
+      "uid": ""
+    },
+    {
+      "id": 4,
+      "slot": "A-004",
+      "start": "2019-10-01T18:37:04.171Z",
+      "end": "2019-10-02T18:37:04.171Z",
+      "status": "booked",
+      "uid": ""
+    },
+    {
+      "id": 5,
+      "slot": "A-005",
+      "start": "2019-10-01T18:40:46.557Z",
+      "end": "2019-10-02T18:40:46.557Z",
+      "status": "booked",
+      "uid": ""
+    },
+    {
+      "id": 6,
+      "slot": "A-006",
+      "start": "",
+      "end": "",
+      "status": "available",
+      "uid": ""
+    },
+    {
+      "id": 7,
+      "slot": "A-007",
+      "start": "",
+      "end": "",
+      "status": "available",
+      "uid": ""
+    },
+    {
+      "id": 8,
+      "slot": "A-008",
+      "start": "",
+      "end": "",
+      "status": "available",
+      "uid": ""
+    },
+    {
+      "id": 9,
+      "slot": "A-009",
+      "start": "",
+      "end": "",
+      "status": "available",
+      "uid": ""
+    },
+    {
+      "id": 10,
+      "slot": "A-010",
+      "start": "",
+      "end": "",
+      "status": "available",
+      "uid": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<div style="background-image:url(assets/Ing_Logo.png)">
+
+    <div class="container mt-5 col-4" style="text-align:center">
+        <p-card [style]="{width: '360px'}" styleClass="ui-card-shadow">
+            <h3 style="color: orange">Login</h3>
+            <div class="container mt-4">
+                <b>Email ID</b><br />
+                <input name="email" [(ngModel)]="email" type="text" size="30" pInputText placeholder="Email ID"
+                    required>
+                <b>Password</b>
+                <input name="pass" [(ngModel)]="password" type="password" size="30" pInputText placeholder="Password">
+
+            </div>
+            <p-footer>
+                <button pButton type="button" label="Login" icon="pi pi-sign-in" style="margin-right: .25em"
+                    (click)="logIn()"></button>
+
+                <div class="container mt-3 ">
+                    <a routerLink="/register">New User? Register Here</a>
+                </div>
+            </p-footer>
+        </p-card>
+    </div>
+</div>

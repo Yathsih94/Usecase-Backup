@@ -1,0 +1,22 @@
+<p-dialog [header]="header" [(visible)]="show || isUpdate" [modal]="true" [responsive]="true"
+  [style]="{width: '350px', minWidth: '200px'}" [minY]="70" [baseZIndex]="10000">
+
+  <div align="center" style="padding: 3em;">
+    <b>Sap ID</b> <input type="text" size="30" pInputText [(ngModel)]="sapid" readonly><br />
+    <b>Name</b><input type="text" size="30" pInputText [(ngModel)]="name"><br />
+    <b>Email</b><input type="text" size="30" pInputText [(ngModel)]="email"><br />
+    <b>Qualification</b><input type="text" size="30" pInputText [(ngModel)]="qual"><br />
+    <b>Designation</b><input type="text" size="30" pInputText [(ngModel)]="desig"><br />
+    <b>Phone No</b><input type="text" size="30" pInputText [(ngModel)]="phone">
+  </div>
+  <p-footer>
+    <button *ngIf="!isUpdate" type="button" pButton icon="pi pi-check"
+      (click)="addEmp(sapid,name,email,qual,desig,phone)" label="Add"></button>
+    <button *ngIf="isUpdate" type="button" pButton icon="pi pi-check"
+      (click)="updateEmp(id,sapid,name,email,qual,desig,phone)" label="Update"></button>
+    <button type="button" pButton icon="pi pi-times" (click)="show=false || isUpdate=false" label=" Close"
+      class="ui-button-secondary"></button>
+    <!-- <button type="button" pButton icon="pi pi-times" (click)="isupdate=false || show=false" label=" Close"
+      class="ui-button-secondary"></button> -->
+  </p-footer>
+</p-dialog>

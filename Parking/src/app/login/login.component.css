@@ -1,0 +1,12 @@
+.col-1{
+    background-color:  rgb(54, 82, 109);
+    width: 100%;
+    float: left;
+    padding: 15px;
+    color: white;
+}
+.b-1{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(23, 210, 235);
+    font-size: 30px;
+}

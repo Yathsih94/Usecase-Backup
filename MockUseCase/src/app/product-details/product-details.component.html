@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div *ngFor="let prod of selecetedProd">
+
+    <p-panel header="Product Details" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+
+      <h4>{{prod.productName}}</h4><br />
+      <h5>{{prod.productDescription}}</h5>
+      <button pButton type="button" icon="pi pi-check" label="Apply Online" (click)="applyForLoan()"></button>
+    </p-panel>
+
+  </div>
+</div>

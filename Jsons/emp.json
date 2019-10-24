@@ -1,0 +1,74 @@
+{
+  "register": [
+    {
+      "name": "Yathish",
+      "email": "yathi123@gmail.com",
+      "phone": "8951285209",
+      "pass": "yathi123",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "name": "Arun",
+      "email": "arun@gmail.com",
+      "phone": "8976456732",
+      "pass": "arun123",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "name": "Rajesh",
+      "email": "rajeshdr@gmail.com",
+      "phone": "7259875436",
+      "pass": "rajesh123",
+      "role": "admin",
+      "id": 3
+    },
+    {
+      "name": "Jayaprakash",
+      "email": "prakash@gmail.com",
+      "phone": "7549832341",
+      "pass": "prakash123",
+      "role": "admin",
+      "id": 4
+    }
+  ],
+  "employees": [
+    {
+      "sapid": 50000003,
+      "name": "Girish Murnal",
+      "email": "girish@gmail.com",
+      "qualification": "MCA",
+      "designation": "Devops Enginner",
+      "phone": "0192837465",
+      "id": 4
+    },
+    {
+      "sapid": 50000004,
+      "name": "Arjun Girish",
+      "email": "arjungirish@gmail.com",
+      "qualification": "BCA",
+      "designation": "System Engineer",
+      "phone": "9823567876",
+      "id": 5
+    },
+    {
+      "sapid": 50000005,
+      "name": "Kailash",
+      "email": "kailash123@gmail.com",
+      "qualification": "MBA",
+      "designation": "Account Officer",
+      "phone": "9878987828",
+      "id": 6
+    },
+    {
+      "sapid": 50000006,
+      "name": "Sukumar",
+      "email": "sukumar@gmail.com",
+      "qualification": "BE in CSE",
+      "designation": "Tech Lead",
+      "phone": "8978093456",
+      "id": 7
+    }
+  ]
+}

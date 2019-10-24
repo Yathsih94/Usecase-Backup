@@ -1,0 +1,35 @@
+
+{ "products": [
+    {
+        "id":1,
+        "name":"one plus 6T",
+        "brand":"oppo",
+        "category":"Mobile",
+        "image":"",
+        "price":27000,
+        "rating":4.9,
+        "quantity":1
+      }
+       ,{
+        "id":2,
+        "name":"K20 pro",
+        "brand":"Redmi",
+        "category":"Mobile",
+        "image":"",
+        "price":27000,
+        "rating":0.0,
+        "quantity":1
+      }
+       ,{
+        "id":3,
+        "name":"Bravia",
+        "brand":"sony",
+        "category":"TV",
+        "image":"",
+        "price":60000,
+        "rating":5,
+        "quantity":1
+      }
+    
+] }
+

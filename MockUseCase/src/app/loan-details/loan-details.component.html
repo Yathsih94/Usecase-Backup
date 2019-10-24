@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h5>Loan/Payment Details</h5>
+  <p-table [columns]="cols" [value]="loanDetails">
+    <ng-template pTemplate="header" let-columns>
+      <tr align="center">
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns">
+          {{rowData[col.field]}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

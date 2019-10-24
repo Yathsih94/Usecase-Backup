@@ -1,0 +1,22 @@
+<!-- Designing the Header Component -->
+<nav class="navbar navbar-expand-sm navbar-dark  " style="background-color:orange">
+  <div class="container-fluid">
+    <a routerLink="home"><img src="assets/Hcl_logo.png" alt="HCL Logo" width="100" /></a>&nbsp;&nbsp;
+    <a routerLink="home" class="navbar-brand">Insurance Claim</a>
+    <div icon="pi pi-times" class="collapse navbar-collapse" *ngIf="display">
+      <ul class="navbar-nav navbar-brand ml-auto">
+        <li><button pButton label="{{userName}}" icon="pi pi-user" class="ui-button-secondary"></button></li>
+        &nbsp;&nbsp;
+        <li><button pButton label="Logout" icon="pi pi-sign-out" (click)="logout()"></button></li>
+      </ul>
+      <p-confirmDialog [style]="{width: '30vw'}">
+      </p-confirmDialog>
+    </div>
+    <div icon="pi pi-times" class="collapse navbar-collapse" *ngIf="!display">
+      <ul class="navbar-nav  navbar-brand ml-auto">
+        <li><a routerLink="status" class="navbar-brand">Check Status</a></li>&nbsp;
+        <li><button pButton label="Goto Login" icon="pi pi-sign-in" (click)="login()"></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>

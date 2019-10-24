@@ -1,0 +1,15 @@
+.div-0{
+    width: 100%;
+    /* padding: 2em; */
+}
+.div-1{
+    width: 75%;
+    float: left;
+    padding: 1em;
+}
+.div-2{
+    width: 25%;
+    float: left;
+    padding: 1em;
+
+}

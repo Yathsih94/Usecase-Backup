@@ -1,0 +1,28 @@
+<!-- <form align="center"> 
+Name:<input type="text" name="uname" [(ngModel)]="user.name"/><br/>
+Email:<input type="email" name="mail" [(ngModel)]="user.email"/><br/>
+Phone:<input type="mobile" name="mob" [(ngModel)]="user.phone"/><br/>
+Password:<input type="password" name="password" [(ngModel)]="user.pass"/><br/>
+<button type="button" (click)="register()">Register</button><br/><a routerLink="/login">Already a user? Just go to Login..!</a>
+</form> -->
+
+<form align="center" > 
+    
+    <div style="height:60px;background-color: rgb(25, 81, 201);"></div>
+        <div><h1>User Registration </h1></div>
+        <div></div>
+        <div><input type="text" pInputText name="uname" [(ngModel)]="user.name" placeholder="Name" size="30"/></div> <br/>
+        <div><input type="email" pInputText name="mail" [(ngModel)]="user.email" placeholder="Email" size="30"/></div><br/>
+        <div><input type="mobile" pInputText  name="mob" [(ngModel)]="user.phone" placeholder="Phone No" size="30"/></div> <br/>
+        <div><input type="password" pInputText name="password" [(ngModel)]="user.pass" placeholder="Password" size="30"/></div><br/>
+        <p-button type="button" label="Register" (click)="register()"></p-button>
+        &nbsp;&nbsp;<a routerLink="/login">Already a user? Just go to Login..!</a>
+        <p-toast [style]="{marginTop: '80px'}" position="top-right" ></p-toast>
+        <p-dialog  [(visible)]="display" [modal]="true"  [style]="{width: '350px', minWidth: '200px'}" [minY]="70" 
+        [maximizable]="true" [baseZIndex]="10000">
+    <p>Successfully Registered</p>
+        <p-footer>
+            <button type="button" pButton icon="pi pi-check" (click)="confirm()" label="OK"></button>
+        </p-footer>
+</p-dialog>
+</form>

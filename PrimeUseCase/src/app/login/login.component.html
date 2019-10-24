@@ -1,0 +1,32 @@
+<form align="center">
+        <div style="height:60px;background-color: rgb(24, 46, 248)"></div>
+    <h2 style="color:rgb(25, 81, 201)">Login</h2> 
+<br/>
+<label>Email Id</label> 
+<span class="ui-float-label">
+    
+    <input id="float-input" type="email" size="30" name="nmail" [(ngModel)]="email" pInputText> 
+    <!-- <label for="float-label" >Email</label> -->
+</span>
+<br/>
+<label >Password</label>
+<span class="ui-float-label">
+        
+    <input id="float-input" type="password" size="30" name="password" [(ngModel)]="pass" pInputText> 
+    <!-- <label for="float-input">Password</label> -->
+</span>
+<a routerLink="/forgotPassword">Forgot Password?</a>
+  <br/>
+  <br/>
+  
+  <!-- Email:<input type="email" name="mail" [(ngModel)]="email"/><br/> -->
+
+  <!-- Password:<input type="password" name="password" [(ngModel)]="pass"/><br/> -->
+  <p-button label="Login" (click)="login()" ></p-button>&nbsp;&nbsp;
+  <a routerLink="/register">New User? Just go to Registration!</a>
+  
+
+  <p-toast [style]="{marginTop: '80px'}" position="top-right" ></p-toast>
+  </form>
+
+  

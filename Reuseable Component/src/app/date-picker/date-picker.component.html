@@ -1,0 +1,25 @@
+<h3 align="center">List of Leaves Data</h3>
+<div align=right><button pButton type="button" label="Refresh" class="ui-button-raised" (click)="refresh()"></button>
+</div>
+<p-table [value]="tableData">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>
+                Start Date
+            </th>
+            <th>
+                End Date
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData>
+        <tr>
+            <td>
+                {{rowData.start | date}}
+            </td>
+            <td>
+                {{rowData.end | date}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -1,0 +1,22 @@
+<form align="center">
+  <br />
+  <h2 style="color:blue">Login</h2>
+  <br />
+
+  <span class="ui-float-label">
+    <input id="float-input" type="text" size="30" name="name" [(ngModel)]="userName" placeholder="User Name" pInputText>
+  </span>
+  <br />
+
+  <span class="ui-float-label">
+    <input id="float-input-1" type="password" size="30" name="pass" [(ngModel)]="password" placeholder="Password"
+      pInputText>
+  </span>
+  <a routerLink="">Forgot Password?</a>
+  <br />
+  <br />
+  <p-button label="Login" (click)="login()"></p-button>&nbsp;&nbsp;
+  <button pButton type="reset" label="Clear" class="ui-button-secondary"></button>
+  <p-toast [style]="{marginTop: '80px'}" position="top-right">
+  </p-toast>
+</form>
